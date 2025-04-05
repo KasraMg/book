@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { HeroUiProvider } from "../Providers/HerouiProvider";
-import Navbar from "@/components/modules/navbar/Navbar";
+import { HeroUiProvider } from "../Providers/HerouiProvider"; 
 import { ThemeProvider } from "next-themes";
 import { ShootingStars } from "@/components/modules/shootingStars/shooting-stars";
 import localFont from "next/font/local";
@@ -42,16 +41,11 @@ export default async function RootLayout({
   return (
     <html>
       <body
-        className={`${vazirmatn.variable} flex gap-4 px-4 bg-[#f5f0fe] text-black antialiased dark:bg-[#0a0a0a] dark:text-white`}
+        className={`${vazirmatn.variable} flex md:gap-4 bg-[#f5f0fe] md:px-4 sm:pl-4 text-black antialiased dark:bg-[#0a0a0a] dark:text-white`}
       >
         <ThemeProvider attribute="class">
           <Sidebar />
-          <HeroUiProvider>
-            <div className="bg-white w-full rounded-lg mt-3" style={{boxShadow:'0px -1px 9px -5px rgba(0,0,0,0.75)'}}>
-              <Navbar />
-              <div className={`relative z-50 font-vazir`} >{children}</div>
-            </div>
-          </HeroUiProvider>
+          <HeroUiProvider>{children}</HeroUiProvider>
           {/* <ShootingStars /> */}
         </ThemeProvider>
       </body>

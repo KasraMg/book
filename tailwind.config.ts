@@ -15,6 +15,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {  
+        md: { min: "900px" }, 
+      },
       fontFamily: {
         vazir: ["var(--font-vazir)"],
       },

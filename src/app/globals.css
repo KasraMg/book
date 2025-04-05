@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
- 
-
- 
+.\[--slide-exit\:80px\] {
+  z-index: 9999 !important;
+}
+.backdrop-opacity-disabled.w-screen {
+  z-index: 9998 !important;
+}
