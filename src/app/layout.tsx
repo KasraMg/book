@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { HeroUiProvider } from "../Providers/HerouiProvider"; 
+import { HeroUiProvider } from "../Providers/HerouiProvider";
 import { ThemeProvider } from "next-themes";
 import { ShootingStars } from "@/components/modules/shootingStars/shooting-stars";
 import localFont from "next/font/local";
@@ -41,7 +41,7 @@ export default async function RootLayout({
   return (
     <html>
       <body
-        className={`${vazirmatn.variable} flex md:gap-4 bg-[#f5f0fe] md:px-4 sm:pl-4 text-black antialiased dark:bg-[#0a0a0a] dark:text-white`}
+        className={`${vazirmatn.variable} flex bg-[#f5f0fe] text-black antialiased dark:bg-[#0a0a0a] dark:text-white sm:pl-4 md:gap-4 md:px-4`}
       >
         <ThemeProvider attribute="class">
           <Sidebar />

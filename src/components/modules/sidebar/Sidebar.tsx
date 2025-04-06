@@ -21,47 +21,47 @@ const Sidebar = () => {
       {theme !== "dark" ? (
         <MdOutlineDarkMode
           onClick={() => setTheme("dark")}
-          className={`mx-auto cursor-pointer text-2xl text-[#7731d8] transition-colors hover:text-black`}
+          className={`mx-auto cursor-pointer text-2xl text-purple transition-colors hover:text-black`}
         />
       ) : (
         <CiLight
           onClick={() => setTheme("light")}
-          className={`mx-auto cursor-pointer text-2xl transition-colors hover:text-white`}
+          className={`mx-auto cursor-pointer text-2xl text-purple transition-colors hover:text-white`}
         />
       )}
 
       <Link className="group !mt-16 block" href={"/home"}>
         <div className="rounded-lg bg-[#7731d81a] p-2 group-hover:bg-[#7731d81a]">
-          <GoHomeFill className="mx-auto block text-2xl text-[#7731d8]" />
-          {/* <GoHome className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" /> */}
+          <GoHomeFill className="mx-auto block text-2xl text-purple" />
+          {/* <GoHome className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" /> */}
         </div>
-        <p className="text-center text-sm font-semibold text-[#7731d8]">Home</p>
+        <p className="text-center text-sm font-semibold text-purple">Home</p>
       </Link>
       <Link className="group block" href={"/books"}>
         <div className={`rounded-lg p-2 group-hover:bg-[#7731d81a]`}>
-          <PiBooks className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
-          {/* <PiBooksFill className="mx-auto block text-2xl text-[#7731d8]" /> */}
+          <PiBooks className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+          {/* <PiBooksFill className="mx-auto block text-2xl text-purple" /> */}
         </div>
         <p className="text-center text-sm text-[#4a2e7fcc]">Books</p>
       </Link>
       <Link className="group block" href={"/authors"}>
         <div className={`rounded-lg p-2 group-hover:bg-[#7731d81a]`}>
-          <GoPencil className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
-          {/* <RiPencilFill className="mx-auto block text-2xl  text-[#7731d8]" /> */}
+          <GoPencil className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+          {/* <RiPencilFill className="mx-auto block text-2xl  text-purple" /> */}
         </div>
         <p className="text-center text-sm text-[#4a2e7fcc]">Authors</p>
       </Link>
       <Link className="group block" href={"/about"}>
         <div className={`rounded-lg p-2 group-hover:bg-[#7731d81a]`}>
-          <IoIosInformationCircleOutline className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
-          {/* <IoIosInformationCircle className="mx-auto block text-2xl text-[#7731d8]" /> */}
+          <IoIosInformationCircleOutline className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+          {/* <IoIosInformationCircle className="mx-auto block text-2xl text-purple" /> */}
         </div>
         <p className="text-center text-sm text-[#4a2e7fcc]">About</p>
       </Link>
       <div className="group absolute bottom-3 block cursor-pointer">
         <div className={`rounded-lg p-2 group-hover:bg-[#7731d81a]`}>
-          <IoIosInformationCircleOutline className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
-          {/* <IoIosInformationCircle className="mx-auto block text-2xl text-[#7731d8]" /> */}
+          <IoIosInformationCircleOutline className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+          {/* <IoIosInformationCircle className="mx-auto block text-2xl text-purple" /> */}
         </div>
         <p className="text-center text-sm text-[#4a2e7fcc]">Logout</p>
       </div>
