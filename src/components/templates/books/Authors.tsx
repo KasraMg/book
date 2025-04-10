@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { TfiWrite } from "react-icons/tfi";
 
 const Authors = () => {
   return (
@@ -12,23 +13,76 @@ const Authors = () => {
       </p>
 
       <div className="space-y-3 mt-8">
-        <Link className="relative items-center flex justify-between" href={"/author/2"}>
-          Shahin Mioeee
+      
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
 
           <span className="text-xs text-purple">4 Books available</span>
         </Link>
-        <Link className="relative items-center flex justify-between" href={"/author/2"}>
-          Shahin Mioeee
+
+
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
 
           <span className="text-xs text-purple">4 Books available</span>
         </Link>
-        <Link className="relative items-center flex justify-between" href={"/author/2"}>
-          Shahin Mioeee
+
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
 
           <span className="text-xs text-purple">4 Books available</span>
         </Link>
-        <Link className="relative items-center flex justify-between" href={"/author/2"}>
-          Shahin Mioeee
+
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
+
+          <span className="text-xs text-purple">4 Books available</span>
+        </Link>
+
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
+
+          <span className="text-xs text-purple">4 Books available</span>
+        </Link>
+
+        <Link
+          className="relative flex items-center justify-between"
+          href={"/author/2"}
+        >
+          <div className="flex gap-1.5 items-center">
+            <TfiWrite className="text-sm" />
+            Shahin Mioeee
+          </div>
 
           <span className="text-xs text-purple">4 Books available</span>
         </Link>

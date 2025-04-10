@@ -12,25 +12,41 @@ const Books = () => {
           id=""
           className="w-full border-b border-purple bg-transparent font-thin md:w-[300px]"
         >
-          <option value="">Select Category</option>
-          <option value="Action">Action</option>
-          <option value="Action">Action</option>
-          <option value="Action">Action</option>
+          <option className="dark:text-black" value="">
+            Select Category
+          </option>
+          <option className="dark:!text-black" value="Action">
+            Action
+          </option>
+          <option className="dark:!text-black" value="Action">
+            Action
+          </option>
+          <option className="dark:!text-black" value="Action">
+            Action
+          </option>
         </select>
         <select
           name=""
           id=""
           className="w-full border-b border-purple bg-transparent font-thin md:w-[300px]"
         >
-          <option value="">Newst</option>
-          <option value="Newst">Newst</option>
-          <option value="Newst">Newst</option>
-          <option value="Newst">Newst</option>
+          <option className="dark:text-black" value="">
+            Newst
+          </option>
+          <option className="dark:!text-black" value="Newst">
+            Newst
+          </option>
+          <option className="dark:!text-black" value="Newst">
+            Newst
+          </option>
+          <option className="dark:!text-black" value="Newst">
+            Newst
+          </option>
         </select>
       </div>
-      <p className="mt-3 text-sm font-thin text-purple">1,000 templates</p>
+      <p className="mt-3 text-sm font-thin text-purple">1,000 Books</p>
 
-      <section className="relative justify-evenly mt-4 grid grid-cols-[auto,auto] gap-4 sm:grid-cols-[auto,auto,auto] md:grid-cols-[auto,auto,auto,auto] xl:grid-cols-[auto,auto,auto,auto,auto]">
+      <section className="relative mt-4 grid grid-cols-[auto,auto] justify-evenly gap-4 sm:grid-cols-[auto,auto,auto] md:grid-cols-[auto,auto,auto,auto] xl:grid-cols-[auto,auto,auto,auto,auto]">
         <Card />
         <Card />
         <Card />
