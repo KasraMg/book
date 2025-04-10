@@ -16,15 +16,18 @@ module.exports = {
         foreground: "var(--foreground)",
         purple: "#7731d8",
       },
-      screens: {  
-        md: { min: "900px" }, 
+      screens: {
+        md: { min: "900px" },
+        xs: { min: "400px" },
       },
       fontFamily: {
         vazir: ["var(--font-vazir)"],
       },
       backgroundImage: {
-        'white-overlay-gradient': 'linear-gradient(to bottom, #ffffff0a, #ffffff91, #ffffffe3, #fff)',
-        'black-overlay-gradient': ' linear-gradient(#0000000a, #000000d9, #000000fc, #000)',
+        "white-overlay-gradient":
+          "linear-gradient(to bottom, #ffffff0a, #ffffff91, #ffffffe3, #fff)",
+        "black-overlay-gradient":
+          " linear-gradient(#0000000a, #000000d9, #000000fc, #000)",
       },
     },
   },

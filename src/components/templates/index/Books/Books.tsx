@@ -1,14 +1,14 @@
 import Title from "@/components/modules/title/Title";
 import { Button } from "@heroui/button";
 import Link from "next/link";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6"; 
 import Card from "./Card";
 
 const Books = () => {
   return (
     <>
       <Title title="Books" />
-      <section className="relative mt-8 grid grid-cols-[auto,auto,auto,auto,auto,auto,auto] gap-4">
+      <section className="relative mt-4 grid grid-cols-[auto,auto,auto,auto,auto] gap-4">
         <Card />
         <Card />
         <Card />

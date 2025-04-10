@@ -21,7 +21,7 @@ const Card = () => {
         <p className="text-xl relative bottom-1">khavier kermnet</p>
         <p className="mb-2 text-xs font-thin text-purple">4 books available </p>
        </div>
-        <p className="text-sm relative bottom-1.5">
+        <p className="text-sm relative bottom-1.5 font-thin">
           salam in ye biografi testi hast dige checkabar chikefe referf rfrfrfrf
           rfrfr vfvf sdede salam in ye biografi testi hast dige checkabar
           chikefe.
