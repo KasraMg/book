@@ -8,3 +8,20 @@
 .backdrop-opacity-disabled.w-screen {
   z-index: 9998 !important;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #7731d8 !important;
+}
