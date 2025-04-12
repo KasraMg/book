@@ -1,6 +1,7 @@
+"use client";
 import { Button } from "@heroui/button";
 import Image from "next/image";
-import Link from "next/link";
+import { CiShare2 } from "react-icons/ci";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { LuDownload } from "react-icons/lu";
 import { MdOutlineAttachMoney } from "react-icons/md";
@@ -12,7 +13,9 @@ const Details = () => {
     <>
       <div className="flex flex-col justify-start gap-5 px-4 pt-10 sm:flex-row sm:px-8">
         <Image
-          src={"https://img.taaghche.com/frontCover/8213.jpg"}
+          src={
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Q4yYiaext6NfwunADCEshIB_0bvt2OJnuQ&s"
+          }
           alt="cover"
           unoptimized
           width={10000}
@@ -20,32 +23,22 @@ const Details = () => {
           className="h-64 min-w-full max-w-full rounded-lg object-cover sm:h-96 sm:min-w-64 sm:max-w-64 lg:min-w-96 lg:max-w-96"
         />
 
-        <div className="px-2 sm:px-0">
-          <div className="mb-4 flex justify-between sm:hidden">
-            <div className="flex gap-4">
-              <div className="flex items-center gap-1 text-center">
-                <IoMdHeartEmpty className="mb-1 text-xl" />
-                <p className="text-sm font-thin">3</p>
-              </div>
-              <div className="flex items-center gap-1 text-center">
-                <LuDownload className="mb-1 text-xl" />
-                <p className="text-sm font-thin">3</p>
-              </div>
-            </div>
-
-            <p className="flex gap-2 text-sm font-thin text-gray-600 sm:hidden">
-              2020/04/24
-              <HiOutlineCalendarDateRange className="lg:hidden xl:block" />
-            </p>
-          </div>
-
+        <div className="px-2 sm:px-0"> 
           <div className="relative flex justify-between">
             <div>
-              <p className="text-2xl font-bold">Bishuri</p>
-              <Link href={`/author/3`} className="text-xl font-bold">
-                khavier kermnet
-              </Link>{" "}
-              <p className="font-thin">Action</p>
+              <p className="text-2xl font-bold">khavier</p>
+              <p className="text-xl font-bold">kermnet</p>{" "}
+              <div className="flex items-center gap-1">
+                <p className="flex gap-2 text-sm font-thin text-gray-600">
+                  2020/04/24
+                  <HiOutlineCalendarDateRange className="lg:hidden xl:block" />
+                </p>
+                <p className="text-gray-600">-</p>
+                <div className="flex items-center gap-1 text-center text-gray-600">
+                  <IoMdHeartEmpty className="mb-1" />
+                  <p className="text-xs font-thin">3</p>
+                </div>
+              </div>
               <p className="text my-4 font-thin text-purple">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Similique fugiat, inventore accusamus quas fuga veniam quae vel
@@ -54,45 +47,44 @@ const Details = () => {
               </p>
             </div>
             <div className="absolute right-0 top-0 hidden sm:block">
-              <p className="gap-2 text-sm flex justify-start font-thin text-gray-600 lg:text-xs xl:text-sm">
-                2020/04/24
+              <p className="flex justify-start gap-2 text-sm font-thin text-gray-600 lg:text-xs xl:text-sm">
+                4 Books Available
                 <HiOutlineCalendarDateRange className="lg:hidden xl:block" />
               </p>
-              <div className="hidden gap-4 mt-2 justify-end md:justify-center sm:flex">
-                <div className="flex items-center gap-1 text-center">
-                  <IoMdHeartEmpty className="mb-1" />
-                  <p className="text-xs font-thin">3</p>
-                </div>
-                <div className="flex items-center gap-1 text-center">
-                  <LuDownload className="mb-1" />
-                  <p className="text-xs font-thin">3</p>
-                </div>
-              </div>
             </div>
           </div>
           <div className="mt-5 flex gap-2">
-            <Button className="w-full rounded-md bg-purple text-white">
-              Download
-            </Button>
-            <div className="bg-transparet group flex cursor-pointer items-center rounded-md border border-gray-300 p-1 dark:border-purple">
+            <Button className="bg-transparet group flex w-full cursor-pointer items-center rounded-md border border-gray-300 p-1 text-white dark:border-purple">
               <IoMdHeartEmpty className="text-2xl text-purple transition-colors group-hover:text-red-600" />
-            </div>
+            </Button>
           </div>
           <div className="mt-4">
+            <div
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: `khavier kermnet`,
+                    url: window.location.href,
+                  });
+                } else {
+                  navigator.clipboard.writeText(window.location.href);
+                }
+              }}
+              className="mb-3 flex cursor-pointer items-center gap-2 font-light"
+            >
+              <CiShare2 />
+              <p className="pt-1">Share</p>
+            </div>
             <div className="flex items-center gap-2 font-light">
               <MdOutlineAttachMoney />
-              <p className="pt-1">100% Free Download</p>
-            </div>
-            <div className="mt-3 flex cursor-pointer items-center gap-2 font-light">
-              <LuDownload />
-              <p className="pt-1">Share And Publish Anywhere</p>
+              <p className="pt-1">100% Free Books Download</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="overflow-x-hidden">
-        <Slider />
+        <Slider title="Books" />
       </div>
     </>
   );

@@ -6,11 +6,14 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Card from "../index/books/Card";
 
-const Slider = () => {
+interface Props{
+  title:string
+}
+const Slider = (props:Props) => {
   return (
     <div className="mt-10 w-full overflow-hidden">
       <div className="container mx-auto px-4">
-        <Title title="Similar books" />
+        <Title title={props.title} />
 
         <div className="relative grid">
           <Swiper

@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import { LuDownload } from "react-icons/lu";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { HiOutlineCalendarDateRange } from "react-icons/hi2";
 import Slider from "./Slider";
+import { CiShare2 } from "react-icons/ci";
 
 const Details = () => {
   return (
@@ -54,11 +56,11 @@ const Details = () => {
               </p>
             </div>
             <div className="absolute right-0 top-0 hidden sm:block">
-              <p className="gap-2 text-sm flex justify-start font-thin text-gray-600 lg:text-xs xl:text-sm">
+              <p className="flex justify-start gap-2 text-sm font-thin text-gray-600 lg:text-xs xl:text-sm">
                 2020/04/24
                 <HiOutlineCalendarDateRange className="lg:hidden xl:block" />
               </p>
-              <div className="hidden gap-4 mt-2 justify-end md:justify-center sm:flex">
+              <div className="mt-2 hidden justify-end gap-4 sm:flex md:justify-center">
                 <div className="flex items-center gap-1 text-center">
                   <IoMdHeartEmpty className="mb-1" />
                   <p className="text-xs font-thin">3</p>
@@ -79,20 +81,34 @@ const Details = () => {
             </div>
           </div>
           <div className="mt-4">
+            <div
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: `khavier kermnet`,
+                    url: window.location.href,
+                  });
+                } else {
+                  navigator.clipboard.writeText(
+                    window.location.href,
+                  );
+                }
+              }}
+              className="mb-3 flex cursor-pointer items-center gap-2 font-light"
+            >
+              <CiShare2 />
+              <p className="pt-1">Share</p>
+            </div>
             <div className="flex items-center gap-2 font-light">
               <MdOutlineAttachMoney />
               <p className="pt-1">100% Free Download</p>
-            </div>
-            <div className="mt-3 flex cursor-pointer items-center gap-2 font-light">
-              <LuDownload />
-              <p className="pt-1">Share And Publish Anywhere</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="overflow-x-hidden">
-        <Slider />
+        <Slider title="Similar books" />
       </div>
     </>
   );
