@@ -19,9 +19,9 @@ const Menu = () => {
     <>
       <div
         onClick={onOpen}
-        className="z-10 block cursor-pointer rounded-md bg-white p-2 shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)] transition-colors hover:bg-[#40576d12] sm:hidden sm:!shadow-none"
+        className="z-10 block cursor-pointer rounded-md bg-transparent p-2 shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)] transition-colors hover:bg-[#40576d12] sm:hidden sm:!shadow-none"
       >
-        <AiOutlineMenu className="text-2xl" />
+        <AiOutlineMenu className="text-2xl text-purple" />
       </div>
 
       <Drawer

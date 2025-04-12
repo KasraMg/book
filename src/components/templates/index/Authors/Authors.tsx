@@ -7,9 +7,9 @@ import Card from "./Card";
 const Authors = () => {
   return (
     <>
-      <Title title="Authors" className="mt-16" />
-      <section className="relative mb-3 mt-3 grid grid-cols-[auto,auto,auto,auto] gap-8">
-        <Card />
+      <Title title="Authors" className="mt-16" /> 
+      <section className="relative mb-3 mt-3 grid grid-cols-[auto,auto] justify-around gap-4 sm:grid-cols-[auto,auto] md:grid-cols-[auto,auto,auto] xl:grid-cols-[auto,auto,auto,auto]">
+       <Card />
         <Card />
         <Card />
         <Card />
@@ -28,7 +28,7 @@ const Authors = () => {
               Show More <FaAngleDown />
             </Button>
           </Link>
-          <div className="bg-white-overlay-gradient dark:!bg-black-overlay-gradient absolute bottom-0 left-0 h-[200px] w-full"></div>
+          <div className="bg-gray-overlay-gradient sm:bg-white-overlay-gradient dark:!bg-black-overlay-gradient absolute bottom-0 left-0 h-[200px] w-full"></div>
         </div>
       </section>
     </>

@@ -8,7 +8,7 @@ const Books = () => {
   return (
     <>
       <Title title="Books" />
-      <section className="relative mt-4 grid grid-cols-[auto,auto,auto,auto,auto] gap-4">
+      <section className="relative mt-4 justify-around grid grid-cols-[auto,auto] gap-4 sm:grid-cols-[auto,auto,auto] md:grid-cols-[auto,auto,auto,auto] xl:grid-cols-[auto,auto,auto,auto,auto]">
         <Card />
         <Card />
         <Card />
@@ -30,7 +30,7 @@ const Books = () => {
               Show More <FaAngleDown />
             </Button>
           </Link>
-          <div className="absolute bottom-0 left-0 h-[100px] w-full bg-white-overlay-gradient dark:!bg-black-overlay-gradient"></div>
+          <div className="absolute bottom-0 left-0 h-[100px] w-full bg-gray-overlay-gradient sm:bg-white-overlay-gradient dark:!bg-black-overlay-gradient"></div>
         </div>
       </section>
     </>

@@ -15,8 +15,7 @@ import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
-  const path = usePathname();
-  console.log(path);
+  const path = usePathname(); 
 
   return (
     <div className="sticky top-0 hidden max-h-screen min-h-screen space-y-5 border-r border-[#4a2e7e26] pb-20 pr-4 pt-6 sm:block">

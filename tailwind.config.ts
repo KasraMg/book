@@ -26,8 +26,10 @@ module.exports = {
       backgroundImage: {
         "white-overlay-gradient":
           "linear-gradient(to bottom, #ffffff0a, #ffffff91, #ffffffe3, #fff)",
+        "gray-overlay-gradient":
+          "linear-gradient(to bottom, #f5f0fe08, #f5f0fea8, #f5f0fede, #f5f0fe)",
         "black-overlay-gradient":
-          " linear-gradient(#0000000a, #000000d9, #000000fc, #000)",
+          "linear-gradient(#0000000a, #000000d9, #000000fc, #000)",
       },
     },
   },
