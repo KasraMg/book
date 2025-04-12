@@ -1,14 +1,13 @@
 "use client";
 import { Button } from "@heroui/button";
 import Image from "next/image";
-import { CiShare2 } from "react-icons/ci";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { LuDownload } from "react-icons/lu";
+import { IoMdHeartEmpty } from "react-icons/io"; 
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { HiOutlineCalendarDateRange } from "react-icons/hi2";
-import Slider from "../book/Slider";
+import Slider from "../book/Slider"; 
+import ShareButton from "@/components/modules/shareButton/ShareButton";
 
-const Details = () => {
+const Details = () => { 
   return (
     <>
       <div className="flex flex-col justify-start gap-5 px-4 pt-10 sm:flex-row sm:px-8">
@@ -59,22 +58,7 @@ const Details = () => {
             </Button>
           </div>
           <div className="mt-4">
-            <div
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: `khavier kermnet`,
-                    url: window.location.href,
-                  });
-                } else {
-                  navigator.clipboard.writeText(window.location.href);
-                }
-              }}
-              className="mb-3 flex cursor-pointer items-center gap-2 font-light"
-            >
-              <CiShare2 />
-              <p className="pt-1">Share</p>
-            </div>
+            <ShareButton/>
             <div className="flex items-center gap-2 font-light">
               <MdOutlineAttachMoney />
               <p className="pt-1">100% Free Books Download</p>

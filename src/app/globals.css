@@ -16,12 +16,24 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px; 
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: #7731d8 !important;
+}
+
+.data-\[selectable\=true\]\:focus\:bg-default:focus[data-selectable="true"] {
+  background-color: #7731d8 !important;
+}
+.data-\[hover\=true\]\:bg-default[data-hover="true"] {
+  background-color: #7731d8 !important;
+  color: white !important;
+}
+.after\:bg-default-foreground:after {
+  background-color: #7731d8 !important;
+
 }

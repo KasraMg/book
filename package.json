@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/autocomplete": "^2.3.18",
     "@heroui/button": "^2.2.10",
     "@heroui/dropdown": "^2.3.16",
     "@heroui/react": "^2.6.14",

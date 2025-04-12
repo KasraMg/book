@@ -1,4 +1,3 @@
-"use client"
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +7,7 @@ import { MdOutlineAttachMoney } from "react-icons/md";
 import { HiOutlineCalendarDateRange } from "react-icons/hi2";
 import Slider from "./Slider";
 import { CiShare2 } from "react-icons/ci";
+import ShareButton from "@/components/modules/shareButton/ShareButton";
 
 const Details = () => {
   return (
@@ -81,24 +81,7 @@ const Details = () => {
             </div>
           </div>
           <div className="mt-4">
-            <div
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: `khavier kermnet`,
-                    url: window.location.href,
-                  });
-                } else {
-                  navigator.clipboard.writeText(
-                    window.location.href,
-                  );
-                }
-              }}
-              className="mb-3 flex cursor-pointer items-center gap-2 font-light"
-            >
-              <CiShare2 />
-              <p className="pt-1">Share</p>
-            </div>
+           <ShareButton />
             <div className="flex items-center gap-2 font-light">
               <MdOutlineAttachMoney />
               <p className="pt-1">100% Free Download</p>

@@ -12,13 +12,29 @@ import {
   DropdownItem,
 } from "@heroui/react";
 import { FaAngleDown } from "react-icons/fa";
-
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import Menu from "./Menu";
 import { CiLight } from "react-icons/ci";
 import { MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  const [value, setValue] = useState("");
+  const router = useRouter();
+  const path = usePathname();
+  const searchParams = useSearchParams();
+  const searchValue = searchParams.get("search");
+
+  useEffect(() => {
+    if (path === "/books") {
+      if (searchValue) {
+        setValue(searchValue);
+      }else{
+        setValue('');
+      }
+    }
+  }, [searchValue, path]);
 
   return (
     <div
@@ -31,10 +47,26 @@ const Navbar = () => {
       <div className="relative w-full min-w-[160px] max-w-[464px] rounded-md shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)] sm:rounded-none sm:!shadow-none">
         <input
           type="text"
-          className="w-full rounded-lg border border-[#35475a33] py-2 pl-10 pr-3 text-black placeholder:text-gray-600"
+          className="w-full rounded-lg border border-[#35475a33] py-2 pl-10 pr-3 text-black outline-none transition-colors placeholder:text-gray-600 focus-visible:border-2 focus-visible:border-purple dark:text-white"
           placeholder="Search Your Book"
+          value={value}
+          onKeyDown={(event) => {
+            if (event.code == "Enter") {
+              if (value.trim().length !== 0) {
+                router.push(`/books?search=${value}`);
+              }
+            }
+          }}
+          onChange={(event) => setValue(event.target.value)}
         />
-        <CiSearch className="absolute left-2 top-2 text-2xl text-purple" />
+        <CiSearch
+          onClick={() => {
+            if (value.trim().length !== 0) {
+              router.push(`/books?search=${value}`);
+            }
+          }}
+          className="absolute left-2 top-2 cursor-pointer text-2xl text-purple"
+        />
       </div>
       <section className="hidden items-center gap-1 sm:flex">
         <div className="hidden cursor-pointer rounded-md p-2 transition-colors hover:bg-[#40576d12] sm:block">
