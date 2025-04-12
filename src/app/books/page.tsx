@@ -1,11 +1,16 @@
 import Container from "@/components/modules/container/Container";
-import Authors from "@/components/templates/books/Authors";
+import List from "@/components/modules/list/List";
 import Books from "@/components/templates/books/Books";
 
 const page = () => {
   return (
     <div className="flex gap-5">
-      <Authors />
+      <List
+        mainWordTitle="Authors"
+        type="authors"
+        title="you might find interesting"
+      />
+
       <Container>
         <Books />
       </Container>
