@@ -36,4 +36,7 @@
 .after\:bg-default-foreground:after {
   background-color: #7731d8 !important;
 
+} 
+.data-\[hover\=true\]\:border-default-400[data-hover="true"] {
+border-color: #e4e4e7 !important;
 }

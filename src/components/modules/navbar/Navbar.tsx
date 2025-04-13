@@ -18,7 +18,7 @@ import Menu from "./Menu";
 import { CiLight } from "react-icons/ci";
 import { MdOutlineDarkMode } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
   const { theme, setTheme } = useTheme();
   const [value, setValue] = useState("");
   const router = useRouter();
@@ -30,8 +30,8 @@ const Navbar = () => {
     if (path === "/books") {
       if (searchValue) {
         setValue(searchValue);
-      }else{
-        setValue('');
+      } else {
+        setValue("");
       }
     }
   }, [searchValue, path]);
@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <div
       dir={"ltr"}
-      className="relative z-[999] flex items-center justify-between gap-3 px-4 py-2 dark:border-white sm:gap-0 sm:px-4 sm:shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)]"
+      className={`${className ? className : ""} relative z-[999] flex items-center justify-between gap-3 px-4 py-2 dark:border-white sm:gap-0 sm:px-4 sm:shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)]`}
     >
       <Menu />
 
