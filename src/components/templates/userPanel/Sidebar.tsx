@@ -15,10 +15,10 @@ const Sidebar = () => {
       </p>
 
       <div className="mt-8 space-y-3">
-        <p className="font-semibold text-xs text-gray-700 px-2">Personal account</p>
+        <p className="font-semibold text-xs text-gray-700 px-2 dark:text-gray-400">Personal account</p>
         <Link
           className={`${path === "/userPanel/profile" ? "bg-[#a570ff26] text-purple !font-normal" : ""} hover:bg-[#a570ff26] transition-colors p-2 rounded-md relative flex items-center justify-start gap-2 font-thin`}
-          href={"/book/2"}
+          href={"/userPanel/profile"}
         >
           <CgProfile className="text-xl" />
           Your Profile
@@ -26,14 +26,14 @@ const Sidebar = () => {
 
         <Link
           className={`${path === "/userPanel/books" ? "bg-[#a570ff26] text-purple !font-normal" : ""} hover:bg-[#a570ff26] transition-colors p-2 rounded-md relative flex items-center justify-start gap-2 font-thin`}
-          href={"/book/2"}
+          href={"/userPanel/books"}
         >
           <LiaBookSolid className="text-xl" />
           Your Books
         </Link>
         <Link
           className={`${path === "/userPanel/favorites" ? "bg-[#a570ff26] text-purple !font-normal" : ""} hover:bg-[#a570ff26] transition-colors p-2 rounded-md relative flex items-center justify-start gap-2 font-thin`}
-          href={"/book/2"}
+          href={"/userPanel/favorites"}
         >
           <FaRegHeart className="text-xl" />
           Your Favorites

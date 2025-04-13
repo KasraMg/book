@@ -16,8 +16,10 @@ import {
 } from "react-icons/io";
 import Image from "next/image";
 import { RiPencilFill } from "react-icons/ri";
-
+import { CgProfile } from "react-icons/cg";
+import { CiLogout } from "react-icons/ci";
 import { usePathname } from "next/navigation";
+
 const Menu = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const path = usePathname();
@@ -59,79 +61,105 @@ const Menu = () => {
                   </div>
                 </div>
 
-                <Link className="group !mt-5 block" href={"/"}>
-                  <div
-                    className={`${path === "/" ? "bg-[#7731d81a]" : ""} rounded-lg p-2 group-hover:bg-[#7731d81a]`}
-                  >
+                <Link
+                  className={`${path === "/" ? "bg-[#7731d81a]" : ""} !mt-5 flex items-center gap-2 rounded-md hover:bg-[#a570ff26]`}
+                  href={"/"}
+                >
+                  <div className={`rounded-lg p-2`}>
                     {path === "/" ? (
                       <GoHomeFill className="mx-auto block text-2xl text-purple" />
                     ) : (
-                      <GoHome className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+                      <GoHome
+                        className={`mx-auto block text-2xl !text-black`}
+                      />
                     )}
                   </div>
                   <p
-                    className={`${path === "/" ? "font-semibold text-purple" : "text-[#4a2e7fcc]"} text-center text-sm`}
+                    className={`${path === "/" ? "font-normal text-purple" : "font-light text-black"} text-center text-sm`}
                   >
                     Home
                   </p>
                 </Link>
-                <Link className="group block" href={"/books"}>
-                  <div
-                    className={`${path === "/books" ? "bg-[#7731d81a]" : ""} rounded-lg p-2 group-hover:bg-[#7731d81a]`}
+                <Link
+                  className={`${path === "/userPanel/profile" ? "bg-[#7731d81a]" : ""} flex items-center gap-2 rounded-md hover:bg-[#a570ff26]`}
+                  href={"/userPanel/profile"}
+                >
+                  <div className={`rounded-lg p-2`}>
+                    <CgProfile
+                      className={`mx-auto block text-2xl !text-black`}
+                    />
+                  </div>
+                  <p
+                    className={`${path === "/userPanel/profile" ? "font-normal text-purple" : "font-light text-black"} text-center text-sm`}
                   >
+                    Dashboard
+                  </p>
+                </Link>
+                <Link
+                  className={`${path === "/books" ? "bg-[#7731d81a]" : ""} flex items-center gap-2 rounded-md hover:bg-[#a570ff26]`}
+                  href={"/books"}
+                >
+                  <div className={`rounded-lg p-2`}>
                     {path === "/books" ? (
                       <PiBooksFill className="mx-auto block text-2xl text-purple" />
                     ) : (
-                      <PiBooks className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+                      <PiBooks
+                        className={`mx-auto block text-2xl !text-black`}
+                      />
                     )}
                   </div>
                   <p
-                    className={`${path === "/books" ? "font-semibold text-purple" : "text-[#4a2e7fcc]"} text-center text-sm`}
+                    className={`${path === "/books" ? "font-normal text-purple" : "font-light text-black"} text-center text-sm`}
                   >
                     Books
                   </p>
                 </Link>
-                <Link className="group block" href={"/authors"}>
-                  <div
-                    className={`${path === "/authors" ? "bg-[#7731d81a]" : ""} rounded-lg p-2 group-hover:bg-[#7731d81a]`}
-                  >
+                <Link
+                  className={`${path === "/authors" ? "bg-[#7731d81a]" : ""} flex items-center gap-2 rounded-md hover:bg-[#a570ff26]`}
+                  href={"/authors"}
+                >
+                  <div className={`rounded-lg p-2`}>
                     {path === "/authors" ? (
                       <RiPencilFill className="mx-auto block text-2xl text-purple" />
                     ) : (
-                      <GoPencil className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+                      <GoPencil
+                        className={`mx-auto block text-2xl !text-black`}
+                      />
                     )}
                   </div>
                   <p
-                    className={`${path === "/authors" ? "font-semibold text-purple" : "text-[#4a2e7fcc]"} text-center text-sm text-[#4a2e7fcc]`}
+                    className={`${path === "/authors" ? "font-normal text-purple" : "font-light text-black"} text-center text-sm text-[#4a2e7fcc]`}
                   >
                     Authors
                   </p>
                 </Link>
-                <Link className="group block" href={"/about"}>
-                  <div
-                    className={`${path === "/about" ? "bg-[#7731d81a]" : ""} rounded-lg p-2 group-hover:bg-[#7731d81a]`}
-                  >
+                <Link
+                  className={`${path === "/about" ? "bg-[#7731d81a]" : ""} flex items-center gap-2 rounded-md hover:bg-[#a570ff26]`}
+                  href={"/about"}
+                >
+                  <div className={`rounded-lg p-2`}>
                     {path === "/about" ? (
                       <IoIosInformationCircle className="mx-auto block text-2xl text-purple" />
                     ) : (
-                      <IoIosInformationCircleOutline className="mx-auto block text-2xl text-[#4a2e7fcc] hover:text-purple" />
+                      <IoIosInformationCircleOutline
+                        className={`mx-auto block text-2xl !text-black`}
+                      />
                     )}
                   </div>
                   <p
-                    className={`${path === "/about" ? "font-semibold text-purple" : "text-[#4a2e7fcc]"} text-center text-sm text-[#4a2e7fcc]`}
+                    className={`${path === "/about" ? "font-normal text-purple" : "font-light text-black"} text-center text-sm text-[#4a2e7fcc]`}
                   >
                     About
                   </p>
                 </Link>
                 <div className="group absolute bottom-3 block cursor-pointer">
                   <div
-                    className={`flex flex-row-reverse justify-end gap-2 rounded-lg p-2 group-hover:bg-[#7731d81a]`}
+                    className={`flex flex-row-reverse justify-end gap-2 rounded-lg p-2`}
                   >
                     <p className="text-center text-sm text-[#4a2e7fcc]">
                       Logout
                     </p>
-                    <IoIosInformationCircleOutline className="block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
-                    {/* <IoIosInformationCircle className=" block text-2xl text-[#7731d8]" /> */}
+                    <CiLogout className="block text-2xl text-[#4a2e7fcc] hover:text-[#7731d8]" />
                   </div>
                 </div>
               </DrawerBody>

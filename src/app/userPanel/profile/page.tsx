@@ -24,18 +24,18 @@ const page = () => {
   ];
   return (
     <div>
-      <Title title="Your Profile" className="[&>*]:!text-2xl" />
+      <Title title="Your Profile" className="[&>*]:!text-2xl sm:flex hidden" />
 
-      <section className="mt-10 w-full xl:w-[750px]">
-        <div className="flex items-center justify-between border-b border-gray-300 pb-5">
+      <section className="sm:mt-10 w-full xl:w-[750px]">
+        <div className="flex sm:flex-row flex-col items-center justify-between border-b border-gray-300 pb-5">
           <div className="w-full">
-            <p className="text-sm">Profile photo</p>
+            <p className="text-sm sm:block hidden">Profile photo</p>
             <Image
               alt="cover"
               width={1000}
               height={1000}
               unoptimized
-              className="mt-1 h-20 w-20 rounded-full"
+              className="mt-1 h-20 w-20 rounded-full mx-auto mb-5 sm:mb-0 block sm:mx-0"
               src={
                 "https://avatar.canva.com/avatars/users/98c283fd-4bec-4d48-a4ca-54940053e27e/200.jpg"
               }
@@ -51,7 +51,7 @@ const page = () => {
         <div className="flex items-center justify-between border-b border-gray-300 pb-5 pt-5">
           <div className="w-full">
             <p className="text-sm">Name</p>
-            <p className="mt-3 text-sm font-thin text-[#0d1216]">
+            <p className="mt-3 text-sm font-thin text-[#0d1216] dark:text-white">
               shahin moshkelGosha
             </p>
           </div>
@@ -64,10 +64,10 @@ const page = () => {
         <div className="flex items-center justify-between border-b border-gray-300 pb-5 pt-5">
           <div className="w-full">
             <p className="text-sm">Email address</p>
-            <div className="mt-3 flex w-full gap-2">
+            <div className="mt-3 sm:flex-nowrap flex-wrap flex w-full gap-2">
               <input
                 type="text"
-                className="w-full rounded-md border border-gray-300 px-2 py-1 text-sm font-thin outline-none transition-colors focus:border-purple"
+                className="w-full rounded-md border border-gray-300 px-2 py-3 sm:py-1 text-sm font-thin outline-none transition-colors focus:border-purple"
                 value={"kasrakasra924@gmail.com"}
               />
               <Button className="border-1" variant="bordered">
@@ -80,7 +80,7 @@ const page = () => {
         <div className="flex items-center justify-between border-b border-gray-300 pb-5 pt-5">
           <div className="w-full">
             <p className="text-sm">Email address</p>
-            <p className="mt-3 text-sm font-thin text-[#0d1216]">
+            <p className="mt-3 text-sm font-thin text-[#0d1216] dark:text-white">
               kasrakasra924@gmail.com
             </p>
           </div>

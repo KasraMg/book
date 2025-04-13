@@ -47,7 +47,7 @@ const Navbar = ({ className }: { className?: string }) => {
       <div className="relative w-full min-w-[160px] max-w-[464px] rounded-md shadow-[0px_0px_0px_1px_rgba(64,87,109,0.04),_0px_6px_20px_-4px_rgba(64,87,109,0.3)] sm:rounded-none sm:!shadow-none">
         <input
           type="text"
-          className="w-full rounded-lg border border-[#35475a33] py-2 pl-10 pr-3 text-black outline-none transition-colors placeholder:text-gray-600 focus-visible:border-2 focus-visible:border-purple dark:text-white"
+          className="w-full rounded-lg border border-[#35475a33] py-2 pl-10 pr-3 text-black outline-none transition-colors dark:placeholder:text-gray-400 placeholder:text-gray-600 focus-visible:border-2 focus-visible:border-purple dark:text-white"
           placeholder="Search Your Book"
           value={value}
           onKeyDown={(event) => {
