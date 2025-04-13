@@ -20,18 +20,18 @@ const Card = () => {
       />
       <div>
         <div className="relative sm:bottom-1">
-          <p className="sm:text-xl font-semibold">Bishuri</p>
-          <p className="relative sm:bottom-1 sm:text-xl">khavier kermnet</p>
-          <p className="mb-2 text-xs font-thin text-purple">
+          <p className="text-left sm:text-xl font-semibold">Bishuri</p>
+          <p className="text-left relative sm:bottom-1 sm:text-xl">khavier kermnet</p>
+          <p className="text-left mb-2 text-xs font-thin text-purple">
             4 books available{" "}
           </p>
         </div>
-        <p className="relative sm:bottom-1.5 text-sm font-thin sm:block hidden">
+        <p className="text-left relative sm:bottom-1.5 text-sm font-thin sm:block hidden">
           salam in ye biografi testi hast dige checkabar chikefe referf rfrfrfrf
           rfrfr vfvf sdede salam in ye biografi testi hast dige checkabar
           chikefe.
         </p>
-        <p className="relative sm:bottom-1.5 text-sm font-thin sm:hidden block">
+        <p className="text-left relative sm:bottom-1.5 text-sm font-thin sm:hidden block">
           salam in ye biografi testi hast dige checkabar chikefe referf rfrfrfrf
           rfrfr...
         </p>
