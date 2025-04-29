@@ -39,11 +39,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${vazirmatn.variable} flex bg-[#f5f0fe] text-black antialiased dark:bg-[#0a0a0a] dark:text-white sm:pl-4 md:gap-4 md:px-4`}
+        suppressHydrationWarning
       >
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Sidebar />
           <HeroUiProvider>{children}</HeroUiProvider>
           {/* <ShootingStars /> */}
