@@ -19,7 +19,7 @@ function Model({ url }: ModelProps) {
       rotation={[0.15, -1.7, 0]}
     />
   );
-}
+} 
 
 export default function BookModel({ url }: ModelProps) {
   return (
@@ -35,3 +35,5 @@ export default function BookModel({ url }: ModelProps) {
     </div>
   );
 }
+
+

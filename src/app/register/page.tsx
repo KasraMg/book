@@ -1,6 +1,6 @@
 import Container from "@/components/modules/container/Container";
-import Form from "@/components/templates/login/Form";
-import Model from "@/components/templates/Model"; 
+import Model from "@/components/templates/Model";
+import Form from "@/components/templates/register/Form";
 
 const page = () => {
   return (
